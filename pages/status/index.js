@@ -10,8 +10,6 @@ function UpdatedAt() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
     refreshInterval: 2000,
   });
-  console.log("data");
-  console.log(data);
   let databaseStatusInformation = "Carregando...";
 
   if (!isLoading && data) {
